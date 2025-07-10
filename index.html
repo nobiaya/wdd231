@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 231 Web Frontend Development I - Obicheozo Lily Nkeiruka. Portfolio and coursework.">
+  <meta name="author" content="Obicheozo Lily Nkeiruka">
+  <title>WDD 231 Portfolio | Obicheozo Lily Nkeiruka</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+
+  <!-- JS -->
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/byu.svg" alt="Site Logo">
+    <span>Obicheozo Lily Nkeiruka</span>
+    <button id="menu" aria-label="Toggle Navigation">&#x2715;</button>
+  </header>
+
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="chambers/dirctory.html">Chamber Project</a>
+    <a href="finals/index.html">Final Project</a>
+    <a href="wayfinding.html">Wayfinding</a>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="about card">
+      <div class="about-text">
+        <h2>About Me</h2>
+         <p>Hello! My name is Obicheozo Lily Nkeiruka, I currently live in Lagos, Nigeria</p><br>
+         <p>I am single. We are six in the family(five girls one boy) and am the third daughter</p><br>
+         <p>I am working to complete a Bachelors in Software Development in Byu-idaho. </p><br>
+         <p>I love listening to music and i wish to play a violin instrustment one day</p><br>
+         <p>I am looking forward to learning more from this class and meeting everyone</p>
+      </div>
+      <div class="about-photo">
+        <h2>Student Photo</h2>
+        <img src="images/mine.jpeg" alt="Photo of Lily">
+      </div>
+    </section>
+
+    <section class="courses card">
+      <h2>Web Certificate Courses</h2>
+      <div class="filters">
+        <button id="allBtn">All</button>
+        <button id="cseBtn">CSE</button>
+        <button id="wddBtn">WDD</button>
+      </div>
+      <div id="courseContainer"></div>
+      <p class="credit-count">The total credits for course listed above is <span id="creditTotal">0</span></p>
+    </section>
+
+    <section class="projects card">
+      <h2>My Web Projects</h2>
+      <ul>
+        <li><a href="chamber/index.html">Chamber of Commerce Website</a></li>
+        <li><a href="final/index.html">Final Project</a></li>
+        <li><a href="wayfinding.html">Wayfinding Activity</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/nobiaya/wdd231" target="_blank"><img src="images/github.svg" alt="GitHub icon"></a>
+      <a href="https://www.linkedin.com/in/lily-promise-42b65b18b" target="_blank"><img src="images/linkid.svg" alt="LinkedIn icon"></a>
+      <a href="https://facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook icon"></a>
+      <a href="https://x.com" target="_blank"><img src="images/x(twitter).svg" alt="Twitter icon"></a>
+    </div>
+    <p>&copy; <span id="year"></span> Obicheozo Lily Nkeiruka | Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
