@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1c2e4a;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  height: 40px;
+}
+
+header span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#menu {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background-color: #334a66;
+  padding: 1rem;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #1c2e4a;
+}
+
+nav a:hover {
+  background-color: #1c2e4a;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1, h2 {
+  color: #1c2e4a;
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+}
+
+.filters {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  background-color: #1c2e4a;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #132239;
+}
+
+.course {
+  background-color: #e8f0fe;
+  border-left: 5px solid #1c2e4a;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.course.completed {
+  border-left-color: green;
+  background-color: #e6ffed;
+}
+
+.course.incomplete {
+  border-left-color: red;
+  background-color: #ffeaea;
+}
+
+.credit-count {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: #1c2e4a;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+footer .social {
+  margin-bottom: 1rem;
+}
+
+footer .social a img {
+  width: 30px;
+  height: 30px;
+  margin: 0 0.5rem;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+footer .social a:hover img {
+  transform: scale(1.1);
+}
