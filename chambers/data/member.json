@@ -1,0 +1,65 @@
+[
+  {
+    "name": "GTBank",
+    "address": "635 Akin Adesola Street, Victoria Island, Lagos",
+    "phone": "+234 700 4826 66328",
+    "website": "https://www.gtbank.com",
+    "image": "images/GTBank.png",
+    "membership": 3,
+    "description": "Leading Nigerian bank offering personal and corporate financial services."
+  },
+  {
+    "name": "Aptech Nigeria",
+    "address": "10 Allen Avenue, Ikeja, Lagos",
+    "phone": "+234 1 291 3746",
+    "website": "https://www.aptech-ng.com",
+    "image": "images/Aptech.png",
+    "membership": 2,
+    "description": "IT training institute offering certified courses in software and networking."
+  },
+  {
+    "name": "Palmtech",
+    "address": "45 Oba Akran Avenue, Ikeja, Lagos",
+    "phone": "+234 802 123 4567",
+    "website": "https://www.palmtechnigeria.com",
+    "image": "images/Palmtech.png",
+    "membership": 1,
+    "description": "Supplier of biometric solutions, ICT products, and system integration services."
+  },
+  {
+    "name": "MTN Nigeria",
+    "address": "MTN Plaza, Falomo Roundabout, Ikoyi, Lagos",
+    "phone": "+234 803 100 0180",
+    "website": "https://www.mtn.ng",
+    "image": "images/MTN.png",
+    "membership": 3,
+    "description": "Telecommunications giant providing voice, data, and mobile financial services."
+  },
+  {
+    "name": "Glo Nigeria",
+    "address": "Mike Adenuga Towers, 1 Mike Adenuga Close, Victoria Island, Lagos",
+    "phone": "+234 805 002 0121",
+    "website": "https://www.gloworld.com/ng/",
+    "image": "images/Glo.png",
+    "membership": 2,
+    "description": "Nigeria's second-largest telecom operator with nationwide coverage."
+  },
+  {
+    "name": "Zoracom",
+    "address": "27A Oladimeji Alo Street, Lekki Phase 1, Lagos",
+    "phone": "+234 809 333 2233",
+    "website": "https://www.zoracom.com",
+    "image": "images/zoracom.png",
+    "membership": 1,
+    "description": "Provider of network observability, cybersecurity, and IT infrastructure solutions."
+  },
+  {
+    "name": "Andela",
+    "address": "2nd Floor, EPIC Tower, 235 Ikorodu Rd, Ilupeju, Lagos",
+    "phone": "+234 817 123 4567",
+    "website": "https://www.andela.com",
+    "image": "images/Andela.png",
+    "membership": 2,
+    "description": "Global talent network connecting companies with software engineers in emerging markets."
+  }
+]
