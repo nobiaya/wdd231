@@ -31,7 +31,8 @@ main {
 }
 
 /* Header and Footer */
-header, footer {
+header,
+footer {
   background-color: #1c2e4a;
   color: white;
   padding: 1rem;
@@ -65,13 +66,6 @@ nav a:focus {
   text-decoration: underline;
 }
 
-/* OG Test Image */
-.test-og-image {
-  max-width: 300px;
-  margin: 1rem auto;
-  display: block;
-}
-
 /* View Buttons */
 .menu {
   margin: 1rem 0;
@@ -90,28 +84,22 @@ nav a:focus {
   border-radius: 5px;
 }
 
-/* Grid and List Layouts */
-.grid-view,
-.list-view {
+/* Grid and List View Layouts */
+#members.grid-view {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
   padding: 1rem 0;
 }
 
-.list-view {
-  display: block;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+#members.list-view {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  margin-bottom: 1rem;
+  padding: 1rem 0;
 }
 
-.grid section,
-.list section,
+/* Member Card */
 .member-card {
   background-color: #fff;
   padding: 1rem;
@@ -121,41 +109,12 @@ nav a:focus {
   text-align: center;
 }
 
-.grid img,
-.list img {
-  max-width: 100%;
+.member-card img {
+  max-width: 200px;
   height: auto;
   border-radius: 8px;
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.list section {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  align-items: center;
-  background-color: #f5f5f5;
-}
-
-.list section > * {
-  margin: 0 1rem;
-}
-
-.list section:nth-child(even) {
-  background-color: #e0e0e0;
-}
-
-.member-card {
-  text-align: center;
-}
-
-.member-card img {
-  height: 100px;
-  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .member-card h3 {
@@ -169,7 +128,7 @@ nav a:focus {
 }
 
 .member-card a {
-  color: #1a3d2f;
+  color: navy;
   text-decoration: none;
   font-weight: 600;
 }
@@ -178,14 +137,30 @@ nav a:focus {
   text-decoration: underline;
 }
 
-section {
-  padding: 0.5rem;
+/* Grid Section (optional content) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-section h3 {
-  font-size: 1.5rem;
+.grid section {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
 }
 
+.grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Social Icons */
 .social-icons {
   margin-top: 0.5rem;
 }
@@ -197,16 +172,6 @@ section h3 {
   vertical-align: middle;
 }
 
-/* Footer Layout */
-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 1.5rem;
-  background-color: #1c2e4a;
-  color: #fff;
-  font-size: 0.95rem;
-}
 
 
 @media (min-width: 768px) {
@@ -217,16 +182,32 @@ footer {
   }
 }
 
+/* MOBILE LIST-VIEW STYLES */
 @media (max-width: 600px) {
-  .list section {
+  #members.list-view {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    gap: 1rem;
   }
 
-  .grid img,
-  .list img {
-    max-width: 100px;
+  #members.list-view .member-card {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  #members.list-view .member-card img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  #members.list-view .member-card div {
+    flex: 1;
   }
 
   nav ul {
@@ -234,3 +215,4 @@ footer {
     align-items: center;
   }
 }
+
