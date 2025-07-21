@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #fefefe;
   color: #333;
 }
@@ -18,55 +18,128 @@ img {
 
 h1 {
   color: #eee;
-  padding: 1rem;
   text-align: center;
+  font-size: 1.75rem;
 }
 
-main {
-  margin: 0 auto;
-  padding: 1rem;
-  max-width: 1000px;
-  background-color: #fff;
-  font-family: Acme, Arial, sans-serif;
-}
-
-/* Header and Footer */
-header,
-footer {
+/* Header */
+header {
   background-color: #1c2e4a;
   color: white;
   padding: 1rem;
 }
 
-/* Navigation */
-nav {
+.header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0.5rem 1rem;
+}
+
+.header-container .logo {
+  height: 50px;
+  background-color: white;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  flex: 1;
+  margin-left: 1rem;
+}
+
+#menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* Navigation */
+nav {
   background-color: #334a66;
 }
 
-nav ul {
+.navigation {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  padding: 1rem;
   flex-wrap: wrap;
 }
 
-nav a {
+.navigation a {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
-nav a:hover,
-nav a:focus {
-  text-decoration: underline;
+.navigation a.active,
+.navigation a[aria-current="page"] {
+  background-color: #fff;
+  color: #1c2e4a;
 }
 
-/* View Buttons */
+.navigation.open {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Section */
+main {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1000px;
+  background-color: #fff;
+}
+
+.info-panels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.panel {
+  flex: 1 1 30%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  min-width: 280px;
+}
+
+.panel h3 {
+  background-color: #334a66;
+  color: white;
+  font-family: monospace;
+  font-size: 1.1rem;
+  margin: -1rem -1rem 1rem -1rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Make Weather content centered */
+.weather,
+.forecast {
+  text-align: center;
+}
+
+.forecast ul {
+  list-style-position: inside;
+  padding: 0;
+}
+
+.forecast li {
+  margin: 0.5rem 0;
+}
+
+/* View Toggle Buttons */
 .menu {
   margin: 1rem 0;
   text-align: center;
@@ -137,30 +210,58 @@ nav a:focus {
   text-decoration: underline;
 }
 
-/* Grid Section (optional content) */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+/* Timbuktucard Hero Section */
+.Timbuktucard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #fff;
+}
+
+.Timbuktucard img {
+  width: auto;
+  height: 100px;
   margin-bottom: 1rem;
 }
 
-.grid section {
-  background-color: #fff;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+.hero-overlay h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.hero-overlay .btn-primary {
+  color: blue;
+  text-decoration: underline;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #1c2e4a;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.footer-info,
+.footer-meta {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
-.grid img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.footer-info p {
+  margin-bottom: 1rem;
 }
 
-/* Social Icons */
 .social-icons {
   margin-top: 0.5rem;
 }
@@ -172,24 +273,49 @@ nav a:focus {
   vertical-align: middle;
 }
 
-
-
-@media (min-width: 768px) {
-  footer {
-    flex-direction: row;
-    justify-content: space-between;
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+    flex-direction: column;
     align-items: center;
+    gap: 0;
+    padding: 0;
+  }
+
+  .navigation.open {
+    display: flex;
+    background-color: #334a66;
+    width: 100%;
+  }
+
+  .navigation li {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #445;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  .header-title {
+    flex: 1 1 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .info-panels {
+    flex-direction: column;
+  }
+
+  .panel {
+    width: 100%;
   }
 }
 
-/* MOBILE LIST-VIEW STYLES */
 @media (max-width: 600px) {
-  #members.list-view {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
   #members.list-view .member-card {
     text-align: left;
     display: flex;
@@ -201,8 +327,6 @@ nav a:focus {
 
   #members.list-view .member-card img {
     max-width: 80px;
-    height: auto;
-    border-radius: 8px;
     flex-shrink: 0;
   }
 
@@ -214,5 +338,16 @@ nav a:focus {
     flex-direction: column;
     align-items: center;
   }
-}
 
+  .Timbuktucard img {
+    height: 80px;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-overlay .btn-primary {
+    font-size: 0.95rem;
+  }
+}

@@ -12,78 +12,107 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/member.css" />
 
   <!-- JS -->
-  <script src="scripts/getdates.js" defer></script>
-  <script src="scripts/course.js" defer></script>
-  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+   <script src="scripts/getdates.js" defer></script>
+   <script src="scripts/weather.js" defer></script>
 </head>
-<body>
-  <header>
-    <img src="images/byu.svg" alt="Site Logo">
-    <span>Obicheozo Lily Nkeiruka</span>
-    <button id="menu" aria-label="Toggle Navigation">&#x2715;</button>
-  </header>
 
-  <nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="directory.html">Chamber Project</a>
-    <a href="finals/index.html">Final Project</a>
-    <a href="wayfinding.html">Wayfinding</a>
+<body>
+
+  <header>
+    <div class="header-container">
+      <img src="images/house1.png" alt="Timbuktu Chamber of Commerce Logo" class="logo" />
+      <h1 class="header-title">Timbuktu Chamber of Commerce</h1>
+      <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">&#9776;</button>
+    </div>
+
+     <nav>
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Join</a></li>
+      <li><a href="#">Discover</a></li>
+    </ul>
   </nav>
 
+  </header>
+
   <main>
-    <h1>Home</h1>
+         <section class="Timbuktucard">
+            <img src="images/house.png" alt="Timbuktu">
+            <div class="hero-overlay">
+                <h2>Welcome to Our Chamber</h2>
+                <a href="join.html" class="btn-primary">Join the Chamber</a>
+            </div>
+        </section>
 
-    <section class="about card">
-      <div class="about-text">
-        <h2>About Me</h2>
-         <p>Hello! My name is Obicheozo Lily Nkeiruka, I currently live in Lagos, Nigeria</p><br>
-         <p>I am single. We are six in the family(five girls one boy) and am the third daughter</p><br>
-         <p>I am working to complete a Bachelors in Software Development in Byu-idaho. </p><br>
-         <p>I love listening to music and i wish to play a violin instrustment one day</p><br>
-         <p>I am looking forward to learning more from this class and meeting everyone</p>
-      </div>
-      <div class="about-photo">
-        <h2>Student Photo</h2>
-        <img src="images/mine.jpeg" alt="Photo of Lily">
+      <section class="info-panels">
+          <div class="panel event">
+          <h3>Events</h3>
+    <!-- Add event content here -->
+         </div>
+       <div class="panel weather" id="weather">
+         <h3>Weather</h3>
+    <!-- JS will populate content here -->
+        </div>
+        <div class="panel forecast">
+          <h3>Forecast</h3>
+    <!-- JS will populate content here -->
+        </div>
+     </section>
+
+    <section class="menu">
+      <h2>Chamber Members</h2>
+      <div class="view-toggle">
+        <button id="grid" aria-pressed="true">Grid</button>
+        <button id="list" aria-pressed="false">List</button>
       </div>
     </section>
 
-    <section class="courses card">
-      <h2>Web Certificate Courses</h2>
-      <div class="filters">
-        <button id="allBtn">All</button>
-        <button id="cseBtn">CSE</button>
-        <button id="wddBtn">WDD</button>
-      </div>
-      <div id="courseContainer"></div>
-      <p class="credit-count">The total credits for course listed above is <span id="creditTotal">0</span></p>
-    </section>
-
-    <section class="projects card">
-      <h2>My Web Projects</h2>
-      <ul>
-        <li><a href="chambers/index.html">Chamber of Commerce Website</a></li>
-        <li><a href="final/index.html">Final Project</a></li>
-        <li><a href="wayfinding.html">Wayfinding Activity</a></li>
-      </ul>
-    </section>
+    <!-- JavaScript will populate the members dynamically -->
+    <section id="members" class="grid-view"></section>
+    
   </main>
 
-  <footer>
-    <div class="social">
-      <a href="https://github.com/nobiaya/wdd231" target="_blank"><img src="images/github.svg" alt="GitHub icon"></a>
-      <a href="https://www.linkedin.com/in/lily-promise-42b65b18b" target="_blank"><img src="images/linkid.svg" alt="LinkedIn icon"></a>
-      <a href="https://facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook icon"></a>
-      <a href="https://x.com" target="_blank"><img src="images/x(twitter).svg" alt="Twitter icon"></a>
-    </div>
-    <p>&copy; <span id="year"></span> Obicheozo Lily Nkeiruka | Nigeria</p>
-    <p id="lastModified"></p>
+ <footer>
+    <section class="footer-info">
+      <p>
+        <strong>Timbuktu Chamber of Commerce</strong><br />
+        10 Rue De La Paix<br />
+        Timbuktu, Mali 999<br />
+        info@timbuktucc.org<br />
+        (223) 555-2300
+      </p>
+      <div class="social-icons">
+        <a href="https://github.com/nobiaya/wdd231" target="_blank">
+          <img src="images/github.svg" alt="GitHub icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/lily-promise-42b65b18b" target="_blank">
+          <img src="images/linkid.svg" alt="LinkedIn icon" />
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          <img src="images/facebook.svg" alt="Facebook icon" />
+        </a>
+      </div>
+    </section>
+
+    <section class="footer-meta">
+      <p>
+        WDD231 Class Project<br />
+        Obicheozo Lily Nkeiruka<br />
+        &copy; <span id="year"></span> Timbuktu Chamber of Commerce<br />
+        <span id="lastModified"></span>
+      </p>
+    </section>
   </footer>
 </body>
 </html>

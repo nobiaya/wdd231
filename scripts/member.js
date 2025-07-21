@@ -1,69 +1,66 @@
 const container = document.getElementById("members");
 const gridBtn = document.getElementById("grid");
 const listBtn = document.getElementById("list");
+const menuToggle = document.getElementById("menu-toggle");
+const navigation = document.querySelector(".navigation");
 
+// Hamburger menu toggle
+menuToggle.addEventListener("click", () => {
+  navigation.classList.toggle("open");
+  const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+  menuToggle.setAttribute("aria-expanded", !expanded);
+});
+
+// Fetch and display members
 async function getMembers() {
   try {
     const response = await fetch("data/member.json");
-    if (!response.ok) {
-      throw new Error("Failed to fetch member data.");
-    }
-    const data = await response.json();
-    displayMembers(data);
+    if (!response.ok) throw new Error("Failed to fetch members");
+    const members = await response.json();
+    displayMembers(members);
   } catch (error) {
-    console.error("Error fetching member data:", error);
-    container.innerHTML = "<p>Unable to load member directory at this time.</p>";
+    console.error("Error loading member data:", error);
+    container.innerHTML = `<p style="color:red;">Unable to load members.</p>`;
   }
 }
 
+// Render member cards
 function displayMembers(members) {
-  container.innerHTML = ""; // Clear existing content
+  container.innerHTML = "";
 
   members.forEach(member => {
-    const section = document.createElement("section");
-    section.classList.add("member-card");
+    const card = document.createElement("section");
+    card.classList.add("member-card");
 
-    section.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo">
-      <h3>${member.name}</h3>
-      <p><strong>Address:</strong> ${member.address}</p>
-      <p><strong>Phone:</strong> ${member.phone}</p>
-      <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
-      <p><strong>Membership:</strong> ${getMembershipLevel(member.membership)}</p>
-      <p>${member.description}</p>
+    card.innerHTML = `
+      <img src="${member.image}" alt="${member.name} logo">
+      <div>
+        <h3>${member.name}</h3>
+        <p>${member.address}</p>
+        <p>${member.phone}</p>
+        <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>
+        <p class="membership">Level: ${["Member", "Silver", "Gold"][member.membership - 1]}</p>
+        <p>${member.description}</p>
+      </div>
     `;
 
-    container.appendChild(section);
+    container.appendChild(card);
   });
 }
 
-function getMembershipLevel(level) {
-  switch (level) {
-    case 1:
-      return "Member";
-    case 2:
-      return "Silver";
-    case 3:
-      return "Gold";
-    default:
-      return "Unknown";
-  }
-}
-
-// Toggle View
+// View toggle buttons
 gridBtn.addEventListener("click", () => {
-  container.classList.add("grid-view");
   container.classList.remove("list-view");
+  container.classList.add("grid-view");
   gridBtn.setAttribute("aria-pressed", "true");
   listBtn.setAttribute("aria-pressed", "false");
 });
 
 listBtn.addEventListener("click", () => {
-  container.classList.add("list-view");
   container.classList.remove("grid-view");
-  listBtn.setAttribute("aria-pressed", "true");
+  container.classList.add("list-view");
   gridBtn.setAttribute("aria-pressed", "false");
+  listBtn.setAttribute("aria-pressed", "true");
 });
 
-// Load members
 getMembers();
