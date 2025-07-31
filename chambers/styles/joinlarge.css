@@ -1,0 +1,28 @@
+
+@media (min-width: 760px) {
+  main {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+  
+  form {
+    flex: 1 1 60%;
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .membership-cards {
+    flex: 1 1 35%;
+    flex-direction: column;
+    margin: 0;
+  }
+
+
+  .modal-content {
+    max-width: 400px;
+  }
+
+}
+

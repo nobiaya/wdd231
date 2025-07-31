@@ -65,17 +65,25 @@ nav {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  margin: 0 auto;
+  max-width: 1000px;
   flex-wrap: wrap;
+}
+
+.navigation li {
+  list-style-type: none;
 }
 
 .navigation a {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
+  display: inline-block;
 }
 
 .navigation a.active,
@@ -88,6 +96,7 @@ nav {
   flex-direction: column;
   align-items: center;
 }
+
 
 /* Main Section */
 main {
@@ -245,6 +254,8 @@ main {
   cursor: pointer;
 }
 
+
+
 /* Footer */
 footer {
   background-color: #1c2e4a;
@@ -351,3 +362,4 @@ footer {
     font-size: 0.95rem;
   }
 }
+
