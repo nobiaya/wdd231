@@ -254,6 +254,82 @@ main {
   cursor: pointer;
 }
 
+.discover-grid {
+  display: grid;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.discover-card {
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.discover-card:hover {
+  transform: scale(1.02);
+}
+
+.discover-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Typography & layout */
+.discover-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #1c2e4a;
+}
+
+.discover-card address {
+  font-style: normal;
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+.discover-card button {
+  background-color: #334a66;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.discover-card button:hover {
+  background-color: #1c2e4a;
+}
+
+.learn-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: #017572; /* matching your theme */
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.learn-btn:hover {
+  background-color: #014e4b;
+}
+
 
 
 /* Footer */
@@ -363,3 +439,23 @@ footer {
   }
 }
 
+/* Media Queries */
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
+}

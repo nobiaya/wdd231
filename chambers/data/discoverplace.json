@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Lekki Conservation Centre",
+    "address": "Lekki-Epe Expressway, Lekki Peninsula",
+    "description": "A natural reserve with canopy walkways, wildlife, and serene picnic spots.",
+    "image": "images/lekki.webp",
+    "link": "https://www.ncfnigeria.org/lekki-conservation-centre"
+  },
+  {
+    "name": "Co-Creation Hub",
+    "address": "6th Floor, 294 Herbert Macaulay Way, Yaba",
+    "description": "A hub for startups and tech innovators in the heart of Yaba.",
+    "image": "images/cchub.webp",
+    "link": "https://cchub.africa/"
+  },
+  {
+    "name": "Nike Art Gallery",
+    "address": "2 Elegushi Road, Lekki",
+    "description": "One of the largest art galleries in Nigeria showcasing contemporary works.",
+    "image": "images/nike.webp",
+    "link": "https://www.nikeartfoundation.com/"
+  },
+  {
+    "name": "The Nest Innovation Park",
+    "address": "1A Hughes Ave, Yaba",
+    "description": "A co-working space for developers, creatives, and startups.",
+    "image": "images/nest.webp",
+    "link": "https://www.thenest.ng/"
+  },
+  {
+    "name": "Computer Village",
+    "address": "Opebi Rd, Ikeja",
+    "description": "A large market and hub for electronics and IT products.",
+    "image": "images/computervillage.webp",
+    "link": "https://en.wikipedia.org/wiki/Computer_Village,_Lagos"
+  },
+  {
+    "name": "Yaba Tech",
+    "address": "Yaba College of Technology, Yaba",
+    "description": "A leading polytechnic institution and tech education center.",
+    "image": "images/yabatech.webp",
+    "link": "https://www.yabatech.edu.ng/"
+  },
+  {
+    "name": "MEST Lagos",
+    "address": "19B Adeyemi Lawson St, Ikoyi",
+    "description": "A training ground and launchpad for African tech entrepreneurs.",
+    "image": "images/mest.webp",
+    "link": "https://meltwater.org/"
+  },
+  {
+    "name": "Techpoint Africa",
+    "address": "7 Ibiyinka Olorunbe Cl, Victoria Island",
+    "description": "A leading media platform for tech news and startup events.",
+    "image": "images/techpoint.webp",
+    "link": "https://techpoint.africa/"
+  }
+]
