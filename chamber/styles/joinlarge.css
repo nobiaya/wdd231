@@ -1,16 +1,16 @@
-
 @media (min-width: 760px) {
   main {
     display: flex;
+    justify-content: center; /* ✅ Center the entire content */
     gap: 2rem;
     align-items: flex-start;
     padding: 2rem;
   }
-  
+
   form {
     flex: 1 1 60%;
     max-width: 600px;
-    margin: 0;
+    margin: 0 auto; /* ✅ Center the form within its flex space */
   }
 
   .membership-cards {
@@ -18,11 +18,4 @@
     flex-direction: column;
     margin: 0;
   }
-
-
-  .modal-content {
-    max-width: 400px;
-  }
-
 }
-
