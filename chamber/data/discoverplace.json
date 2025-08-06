@@ -1,58 +1,58 @@
 [
   {
-    "name": "Lekki Conservation Centre",
+    "title": "Lekki Conservation Centre",
     "address": "Lekki-Epe Expressway, Lekki Peninsula",
     "description": "A natural reserve with canopy walkways, wildlife, and serene picnic spots.",
     "image": "images/Lekki Conservation Centre.webp",
     "link": "https://ncfnigeria.org/"
   },
   {
-    "name": "Co-Creation Hub",
+    "title": "Co-Creation Hub",
     "address": "6th Floor, 294 Herbert Macaulay Way, Yaba",
     "description": "A hub for startups and tech innovators in the heart of Yaba.",
     "image": "images/Co-Creation Hub.webp",
     "link": "https://cchub.africa/"
   },
   {
-    "name": "Nike Art Gallery",
+    "title": "Nike Art Gallery",
     "address": "2 Elegushi Road, Lekki",
     "description": "One of the largest art galleries in Nigeria showcasing contemporary works.",
-    "image": "images/nike.webp",
-    "link": "https://www.nikeartfoundation.com/"
+    "image": "images/Nike Art.webp",
+    "link": "https://nikeartfoundation.com/"
   },
   {
-    "name": "The Nest Innovation Park",
+    "title": "The Nest Innovation Park",
     "address": "1A Hughes Ave, Yaba",
     "description": "A co-working space for developers, creatives, and startups.",
-    "image": "images/nest.webp",
-    "link": "https://www.thenest.ng/"
+    "image": "images/Nest Innovation Park.webp",
+    "link": "https://thenest.com.ng/"
   },
   {
-    "name": "Computer Village",
+    "title": "Computer Village",
     "address": "Opebi Rd, Ikeja",
     "description": "A large market and hub for electronics and IT products.",
-    "image": "images/computervillage.webp",
+    "image": "images/Computer Village.webp",
     "link": "https://en.wikipedia.org/wiki/Computer_Village,_Lagos"
   },
   {
-    "name": "Yaba Tech",
+    "title": "Yaba Tech",
     "address": "Yaba College of Technology, Yaba",
     "description": "A leading polytechnic institution and tech education center.",
-    "image": "images/yabatech.webp",
-    "link": "https://www.yabatech.edu.ng/"
+    "image": "images/Yaba.webp",
+    "link": "https://yabatech.edu.ng/"
   },
   {
-    "name": "MEST Lagos",
+    "title": "MEST Lagos",
     "address": "19B Adeyemi Lawson St, Ikoyi",
     "description": "A training ground and launchpad for African tech entrepreneurs.",
-    "image": "images/mest.webp",
+    "image": "images/MEST.webp",
     "link": "https://meltwater.org/"
   },
   {
-    "name": "Techpoint Africa",
+    "title": "Techpoint Africa",
     "address": "7 Ibiyinka Olorunbe Cl, Victoria Island",
     "description": "A leading media platform for tech news and startup events.",
-    "image": "images/techpoint.webp",
+    "image": "images/Techpoint.webp",
     "link": "https://techpoint.africa/"
   }
 ]

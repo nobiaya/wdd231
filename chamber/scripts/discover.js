@@ -1,5 +1,6 @@
 // discover.js
 
+// Load discover cards from JSON
 async function loadDiscoverCards() {
   const container = document.getElementById('discover-cards');
   try {
@@ -14,12 +15,18 @@ async function loadDiscoverCards() {
       card.innerHTML = `
         <h2>${item.title}</h2>
         <figure>
-          <img src="${item.image}" alt="${item.title}" />
+          <img src="${item.image}" alt="${item.title}" loading="lazy" />
         </figure>
         <address>${item.address}</address>
         <p>${item.description}</p>
         <button type="button" aria-label="Learn more about ${item.title}">Learn More</button>
       `;
+
+      // "Learn More" button event
+      const button = card.querySelector('button');
+      button.addEventListener('click', () => {
+        window.open(item.link, '_blank');
+      });
 
       container.appendChild(card);
     });
@@ -29,10 +36,11 @@ async function loadDiscoverCards() {
   }
 }
 
+// Show visit message using localStorage
 function showVisitMessage() {
   const visitEl = document.getElementById('visit-message');
   const now = Date.now();
-  const lastVisit = localStorage.getItem('lastVisit');
+  const lastVisit = Number(localStorage.getItem('lastVisit'));
   let message = '';
 
   if (!lastVisit) {
@@ -47,9 +55,28 @@ function showVisitMessage() {
       message = `You last visited ${daysSince} days ago.`;
     }
   }
+
   visitEl.textContent = message;
   localStorage.setItem('lastVisit', now);
 }
 
-loadDiscoverCards();
-showVisitMessage();
+// Toggle mobile navigation menu
+function setupMenuToggle() {
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.querySelector(".navigation");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
+
+    // Update ARIA attribute for accessibility
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", !expanded);
+  });
+}
+
+// Initialize all features on DOM load
+document.addEventListener("DOMContentLoaded", () => {
+  loadDiscoverCards();
+  showVisitMessage();
+  setupMenuToggle();
+});

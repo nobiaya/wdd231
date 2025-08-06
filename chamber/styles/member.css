@@ -254,6 +254,82 @@ main {
   cursor: pointer;
 }
 
+.visit-message {
+  background-color: #e0f0ff;
+  border-left: 4px solid #1c2e4a;
+  padding: 0.5rem 1rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "card1 card2 card3 card4"
+    "card5 card6 card7 card8";
+  gap: 2rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: #fafafa;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #004080;
+}
+
+.card figure {
+  margin: 0;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card address {
+  font-style: normal;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  flex-grow: 1;
+  color: #333;
+}
+
+.card button {
+  background-color: #1c2e4a;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.card button:hover,
+.card button:focus {
+  background-color: #094785;
+  outline: none;
+}
+
 
 /* Footer */
 footer {
