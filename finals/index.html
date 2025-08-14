@@ -1,82 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Site Plan - Tech Startups Directory in Lagos</title>
-  <link rel="stylesheet" href="styles/final.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Courier+Prime&display=swap" rel="stylesheet">
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tech Startups Directory in Lagos.">
+  <meta name="author" content="Obicheozo Lily Nkeiruka">
+  <title>Tech Startups Lagos | Obicheozo Lily Nkeiruka</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/startup.css">
+  
 </head>
 
 <body>
   <header>
-    <div class="header-container">
-      <h1>Tech Startups Lagos</h1>
-      <nav aria-label="Main navigation">
-        <ul class="navigation">
-          <li><a href="index.html" aria-current="page" class="active">Home</a></li>
-          <li><a href="directory.html">Directory</a></li>
-          <li><a href="join.html">Join</a></li>
-        </ul>
-      </nav>
-    </div>
+    <img src="images/lagoslogo.webp" alt="Site Logo">
+    <h1>TECH STARTUPS LAGOS</h1>
+    <nav>
+      <button id="menu" aria-label="Open navigation menu">☰</button>
+      <ul class="navigation">
+        <li><a href="index.html" aria-label="Home page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="wayfinding.html">Wayfinding</a></li> 
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Site Name</h2>
-      <p><strong>Name:</strong> TechStartupsLagos</p>
-      <p>This name highlights the focus on technology startups in Lagos. It's clear, professional, and memorable.</p>
+    <section class="hero">
+      <img src="images/lagos.webp" alt="Tech Startup Hero Image" class="hero-img"/>
+      <a href="directory.html" class="cta">Explore now</a>
     </section>
 
-    <section>
-      <h2>Site Purpose</h2>
-      <p>This website serves as a directory showcasing Lagos-based tech startups and companies. It will provide users with detailed company profiles, including logo, address, contact info, website link, and membership tier. Visitors can toggle between list and grid views to browse real-time data fetched from a local JSON file.</p>
+    <h2>Featured Startups</h2>
+    <section id="member-container" class="grid-view">
+      <!-- JavaScript will populate this section -->
     </section>
+    
 
-    <section>
-      <h2>Scenarios</h2>
-      <ul>
-        <li>Which tech startups are currently active in Lagos?</li>
-        <li>How can I contact or learn more about a startup listed?</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Color Schema</h2>
-      <ul>
-        <li><strong>Primary (Dark Blue: #1c2e4a)</strong> - Used for header and footer backgrounds.</li>
-        <li><strong>Accent (Light Blue: #334a66)</strong> - Used for navigation background and panel headers.</li>
-        <li><strong>Text/Base (#333)</strong> - Used for body text.</li>
-        <li><strong>White (#fff)</strong> - Used for content backgrounds.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Typography</h2>
-      <ul>
-        <li><strong>Roboto</strong> - Used for body and paragraph text.</li>
-        <li><strong>Courier Prime</strong> - Used for headings and hero sections.</li>
-      </ul>
-    </section>
-
-    <section class="wireframes">
-      <h2>Wireframes</h2>
-      <div class="wireframe-grid">
-        <div>
-          <h3>Desktop View</h3>
-          <img src="images/Desktop.PNG" alt="Desktop wireframe" />
-        </div>
-        <div>
-          <h3>Mobile View</h3>
-          <img src="images/Mobile.PNG" alt="Mobile wireframe" />
-        </div>
-      </div>
-    </section>
+    
   </main>
 
   <footer>
-    <p>&copy; 2025 Tech Startups Directory in Lagos</p>
+    <p>&copy; <span id="year"></span> 2025 Techstartup Lagos | Nigeria </p>
+    <a href="https://www.loom.com/share/d004aa15b8cf4a6b85d2a18148297cae?sid=612cd5e3-c2c1-444e-8ed4-81d144e799b2"><p id="myvid">Watch Video</p></a>
+    <p id="lastModified"></p>
   </footer>
+
+  <script src="scripts/startup.js" defer></script>
+  <script src="scripts/nav.js" defer></script>
+ <script src="scripts/footer.js" defer></script>
 </body>
 </html>
+
+

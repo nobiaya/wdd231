@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Paystack",
+    "address": "126 Joel Ogunnaike Street, Ikeja GRA, Lagos",
+    "phone": "+234 1 631 6160",
+    "url": "https://paystack.com",
+    "image": "Paystack.webp",
+    "membership": "Gold",
+    "info": "Online payment processing for businesses across Africa."
+  },
+  {
+    "name": "Flutterwave",
+    "address": "8 Providence Street, Lekki Phase 1, Lagos",
+    "phone": "+234 1 888 9595",
+    "url": "https://flutterwave.com",
+    "image": "flutterwave.webp",
+    "membership": "Gold",
+    "info": "Provides payment infrastructure for global merchants and payment service providers."
+  },
+  {
+    "name": "Kuda Bank",
+    "address": "151 Herbert Macaulay Way, Yaba, Lagos",
+    "phone": "+234 700 555 5832",
+    "url": "https://kuda.com",
+    "image": "Kuda.webp",
+    "membership": "Silver",
+    "info": "Nigeria’s first full-service digital-only bank."
+  },
+  {
+    "name": "Andela",
+    "address": "Ilupeju, Lagos",
+    "phone": "+234 1 631 4301",
+    "url": "https://andela.com",
+    "image": "andela.webp",
+    "membership": "Gold",
+    "info": "Connects companies with vetted software engineers from Africa."
+  },
+  {
+    "name": "Hotels.ng",
+    "address": "3 Birrel Avenue, Sabo, Yaba, Lagos",
+    "phone": "+234 1 632 1160",
+    "url": "https://hotels.ng",
+    "image": "hotelng.webp",
+    "membership": "Silver",
+    "info": "Hotel booking platform for Nigerian travelers."
+  },
+  {
+    "name": "Printivo",
+    "address": "16, Akinyemi Crescent, Masha, Surulere, Lagos",
+    "phone": "+234 1 631 4350",
+    "url": "https://printivo.com",
+    "image": "Printivo.webp",
+    "membership": "Silver",
+    "info": "Online printing company for business and personal needs."
+  },
+  {
+    "name": "Farmcrowdy",
+    "address": "18b Ogundana Street, Allen, Ikeja, Lagos",
+    "phone": "+234 809 222 2266",
+    "url": "https://farmcrowdy.com",
+    "image": "farmcrowdy.webp",
+    "membership": "Silver",
+    "info": "Agritech platform connecting farmers with sponsors."
+  }
+]

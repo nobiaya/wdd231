@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tech Startups Directory in Lagos" />
+  <meta name="author" content="Obicheozo Lily Nkeiruka" />
+  <title>Join the Directory | Tech Startups Lagos</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/startup.css" />
+   <link rel="stylesheet" href="styles/join.css">
+</head>
+
+
+<body>
+  <header>
+   <img src="images/lagoslogo.webp" alt="Site Logo">
+   <h1>JOIN TECH STARTUPS IN LAGOS</h1>
+    <nav>
+      <button id="menu" aria-label="Open navigation menu">☰</button>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" aria-label="Home page">Join</a></li>
+        <li><a href="wayfinding.html">Wayfinding</a></li> 
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form method="get" action="displaystartup.html" novalidate>
+
+     <label for="firstName">
+        First Name:
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          required
+          title="Enter your first name"
+          autocomplete="given-name"
+          placeholder="John"
+        />
+      </label>
+
+      <label for="lastName">
+        Last Name:
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          required
+          title="Enter your last name"
+          autocomplete="family-name"
+          placeholder="Doe"
+        />
+      </label>
+
+      <label for="orgTitle">
+        Organizational Title:
+        <input
+          type="text"
+          id="orgTitle"
+          name="orgTitle"
+          title="Enter your organizational title (letters, hyphens, spaces, min 7 characters)"
+          autocomplete="organization-title"
+          pattern="^[A-Za-z\s-]{7,}$"
+          placeholder="Marketing Manager"
+        />
+      </label>
+
+      <label for="email">
+        Email Address:
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          title="Enter your email address"
+          autocomplete="email"
+          placeholder="example@domain.com"
+        />
+      </label>
+
+      <label for="mobilePhone">
+        Mobile Phone:
+        <input
+          type="tel"
+          id="mobilePhone"
+          name="mobilePhone"
+          required
+          title="Enter your mobile phone number"
+          autocomplete="tel"
+          placeholder="123-456-7890"
+        />
+      </label>
+
+      <label for="businessName">
+        Business/Organization Name:
+        <input
+          type="text"
+          id="businessName"
+          name="businessName"
+          required
+          title="Enter your business or organization name"
+          autocomplete="organization"
+          placeholder="Lagos Startup"
+        />
+      </label>
+
+      <fieldset>
+        <legend>Membership Level:</legend>
+
+        <label>
+          <input type="radio" name="membershipLevel" value="NP Membership" checked />
+          NP Membership (Non-Profit, No Fee)
+        </label>
+        <label>
+          <input type="radio" name="membershipLevel" value="Bronze Membership" />
+          Bronze Membership
+        </label>
+        <label>
+          <input type="radio" name="membershipLevel" value="Silver Membership" />
+          Silver Membership
+        </label>
+        <label>
+          <input type="radio" name="membershipLevel" value="Gold Membership" />
+          Gold Membership
+        </label>
+      </fieldset>
+
+      <label for="description">
+        Business/Organization Description:
+        <textarea
+          id="description"
+          name="description"
+          title="Enter a description of your business or organization"
+          placeholder="Briefly describe your business or organization"
+        ></textarea>
+      </label>
+
+      <input
+        type="hidden"
+        id="timestamp"
+        name="timestamp"
+        value=""
+      />
+
+      <input type="submit" value="Submit Membership Application" />
+    </form>
+
+    <section class="membership-cards" aria-label="Membership Levels">
+      <article class="membership-card" tabindex="0">
+        <h3>NP Membership</h3>
+        <p>Non-Profit Organizations. No Fee.</p>
+        <a href="#modal-np" class="open-modal" data-modal="modal-np">More Info</a>
+      </article>
+
+      <article class="membership-card" tabindex="0">
+        <h3>Bronze Membership</h3>
+        <p>Basic membership with some benefits.</p>
+        <a href="#modal-bronze" class="open-modal" data-modal="modal-bronze">More Info</a>
+      </article>
+
+      <article class="membership-card" tabindex="0">
+        <h3>Silver Membership</h3>
+        <p>Includes training and event discounts.</p>
+        <a href="#modal-silver" class="open-modal" data-modal="modal-silver">More Info</a>
+      </article>
+
+      <article class="membership-card" tabindex="0">
+        <h3>Gold Membership</h3>
+        <p>Full benefits including networking connection.</p>
+        <a href="#modal-gold" class="open-modal" data-modal="modal-gold">More Info</a>
+      </article>
+    </section>
+
+    <!-- Modals -->
+    <div id="modal-np" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-np-title" tabindex="-1">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <h2 id="modal-np-title">NP Membership Benefits</h2>
+        <ul>
+          <li>No membership fee</li>
+          <li>Access to networking events</li>
+          <li>Newsletter subscription</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="modal-bronze" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-bronze-title" tabindex="-1">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <h2 id="modal-bronze-title">Bronze Membership Benefits</h2>
+        <ul>
+          <li>Basic event access</li>
+          <li>Business directory listing</li>
+          <li>Invitation to monthly meetings</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="modal-silver" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-silver-title" tabindex="-1">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <h2 id="modal-silver-title">Silver Membership Benefits</h2>
+        <ul>
+          <li>All Bronze benefits</li>
+          <li>Discounted training sessions</li>
+          <li>Priority event registration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="modal-gold" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title" tabindex="-1">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <h2 id="modal-gold-title">Gold Membership Benefits</h2>
+        <ul>
+          <li>All Silver benefits</li>
+          <li>Spotlight advertising on homepage</li>
+          <li>Exclusive VIP event invitations</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> 2025 Techstartup Lagos | Nigeria</p>
+    <a href="https://www.loom.com/share/d004aa15b8cf4a6b85d2a18148297cae?sid=612cd5e3-c2c1-444e-8ed4-81d144e799b2"><p id="myvid">Watch Video</p></a>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/join.js" defer></script>
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+</body>
+</html>

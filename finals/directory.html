@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tech Startups Directory in Lagos" />
+  <meta name="author" content="Obicheozo Lily Nkeiruka" />
+  <title>Directory | Tech Startups Lagos</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/startup.css" />
+
+ 
+</head>
+
+<body>
+  <header>
+    <img src="images/lagoslogo.webp" alt="Site Logo">
+    <h1>TECH STARTUPS LAGOS</h1>
+    <nav>
+      <button id="menu" aria-label="Open navigation menu">☰</button>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" aria-label="Home page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="wayfinding.html">Wayfinding</a></li> 
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Startup Directory</h2>
+
+    <div class="view-toggle">
+      <button id="grid-view" class="active">Grid View</button>
+      <button id="list-view">List View</button>
+    </div>
+
+    <section id="member-container" class="grid-view">
+      <!-- JavaScript will populate this section -->
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> 2025 Techstartup Lagos | Nigeria</p>
+    <a href="https://www.loom.com/share/d004aa15b8cf4a6b85d2a18148297cae?sid=612cd5e3-c2c1-444e-8ed4-81d144e799b2"><p id="myvid">Watch Video</p></a>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/startup.js" defer></script>
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+</body>
+</html>
